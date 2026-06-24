@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLOW — BLOOM RUN · Play in the tweet</title>
+
+<!-- ============================================================
+     X (TWITTER) PLAYER CARD
+     X's scraper reads these tags and embeds the game inside the tweet.
+     Live host: https://mlow.xyz/bloomrun/  (tweet THIS url)
+     ============================================================ -->
+<meta name="twitter:card"          content="player">
+<meta name="twitter:site"          content="@degens">
+<meta name="twitter:creator"       content="@degens">
+<meta name="twitter:title"         content="MLOW — BLOOM RUN · NYC Taxi Edition">
+<meta name="twitter:description"   content="Drive the MLow art taxi up Manhattan. Every pedestrian who sees the rooftop sign is an impression. Collect fLOWers, trigger Bloom Mode, take over Times Square. Playable right here.">
+<meta name="twitter:image"         content="https://mlow.xyz/bloomrun/bloomrun_poster_16x9.png">
+<meta name="twitter:player"        content="https://mlow.xyz/bloomrun/MLOW_Bloom_Run_NFT.html">
+<meta name="twitter:player:width"  content="480">
+<meta name="twitter:player:height" content="480">
+
+<meta property="og:type"        content="website">
+<meta property="og:title"       content="MLOW — BLOOM RUN · NYC Taxi Edition">
+<meta property="og:description" content="A playable NFT. One taxi. One rooftop sign. Eight million eyes.">
+<meta property="og:image"       content="https://mlow.xyz/bloomrun/bloomrun_poster_16x9.png">
+<meta property="og:url"         content="https://mlow.xyz/bloomrun/">
+
+<style>
+  :root{--blue:#2962FF;--cyan:#00E5FF;--ink:#0D0D0D;--cloud:#F0F4F8;--slate:#8899AA}
+  *{margin:0;box-sizing:border-box}
+  body{background:var(--ink);color:var(--cloud);font-family:Arial,Helvetica,sans-serif;
+    min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;gap:18px}
+  h1{font-family:Georgia,serif;font-size:clamp(22px,4.5vw,34px);letter-spacing:.04em}
+  h1 em{font-style:italic;color:var(--cyan)}
+  p{color:var(--slate);font-size:14px;max-width:520px;text-align:center;line-height:1.5}
+  .frame{width:min(520px,94vw);aspect-ratio:1/1.35;border:1px solid #223;border-radius:14px;overflow:hidden;
+    box-shadow:0 0 60px rgba(41,98,255,.25)}
+  iframe{width:100%;height:100%;border:0}
+  .meta{font-family:Consolas,monospace;font-size:10px;letter-spacing:.3em;color:#3c4858;text-transform:uppercase}
+</style>
+</head>
+<body>
+  <h1>MLOW — BLOOM <em>RUN</em></h1>
+  <p>Inside a tweet this page becomes the game itself. If you landed here directly, play below — drag to steer, tap the meter to bloom.</p>
+  <div class="frame">
+    <iframe src="MLOW_Bloom_Run_NFT.html" title="MLOW Bloom Run" allow="fullscreen"></iframe>
+  </div>
+  <div class="meta">MLow · Evolution of fLOWers · Blossom</div>
+</body>
+</html>
