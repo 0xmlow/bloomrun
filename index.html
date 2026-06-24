@@ -6,19 +6,23 @@
 <title>MLOW — BLOOM RUN · Play in the tweet</title>
 
 <!-- ============================================================
-     X (TWITTER) PLAYER CARD
-     X's scraper reads these tags and embeds the game inside the tweet.
-     Live host: https://bloomrun.mlow.xyz/  (tweet THIS url)
+     X (TWITTER) CARD
+     Inline "player" cards only render for X-allowlisted publisher domains,
+     so we use summary_large_image: a big 1200x675 poster that ALWAYS renders,
+     tap opens the live playable game. Tweet: https://bloomrun.mlow.xyz/
+     If X ever approves bloomrun.mlow.xyz for a player card, switch the
+     twitter:card value below to "player" and uncomment the player tags.
      ============================================================ -->
-<meta name="twitter:card"          content="player">
+<meta name="twitter:card"          content="summary_large_image">
 <meta name="twitter:site"          content="@degens">
 <meta name="twitter:creator"       content="@degens">
 <meta name="twitter:title"         content="MLOW — BLOOM RUN · NYC Taxi Edition">
-<meta name="twitter:description"   content="Drive the MLow art taxi up Manhattan. Every pedestrian who sees the rooftop sign is an impression. Collect fLOWers, trigger Bloom Mode, take over Times Square. Playable right here.">
+<meta name="twitter:description"   content="A playable NFT. Drive the MLow art taxi up Manhattan, collect fLOWers, trigger Bloom Mode, take over Times Square. Tap to play in your browser.">
 <meta name="twitter:image"         content="https://bloomrun.mlow.xyz/bloomrun_poster_16x9.png">
+<!-- Player tags (inert unless twitter:card = player and domain is allowlisted):
 <meta name="twitter:player"        content="https://bloomrun.mlow.xyz/MLOW_Bloom_Run_NFT.html">
 <meta name="twitter:player:width"  content="480">
-<meta name="twitter:player:height" content="480">
+<meta name="twitter:player:height" content="480"> -->
 
 <meta property="og:type"        content="website">
 <meta property="og:title"       content="MLOW — BLOOM RUN · NYC Taxi Edition">

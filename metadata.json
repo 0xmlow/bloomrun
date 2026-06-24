@@ -1,0 +1,16 @@
+{
+  "name": "BLOOM RUN — NYC Taxi Edition",
+  "description": "A playable NFT by MLow. Drive the art taxi up Manhattan. Every pedestrian who sees the rooftop sign is an impression. Collect fLOWers, charge the Bloom Meter, trigger Bloom Mode, and take over Times Square. Runs from a single self-contained file, fully on-chain-ready, playable right on the item page.",
+  "image": "ipfs://REPLACE_WITH_POSTER_CID/bloomrun_poster_16x9.png",
+  "animation_url": "ipfs://REPLACE_WITH_GAME_CID/MLOW_Bloom_Run_NFT.html",
+  "external_url": "https://bloomrun.mlow.xyz/",
+  "background_color": "0D0D0D",
+  "attributes": [
+    { "trait_type": "Artist", "value": "MLow" },
+    { "trait_type": "Series", "value": "Evolution of fLOWers" },
+    { "trait_type": "Edition", "value": "NYC Taxi" },
+    { "trait_type": "Type", "value": "Playable (interactive HTML)" },
+    { "trait_type": "Controls", "value": "Drive / Bloom" },
+    { "trait_type": "Self-contained", "value": "Yes (zero external requests)" }
+  ]
+}
