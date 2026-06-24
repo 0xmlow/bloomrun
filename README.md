@@ -15,34 +15,35 @@ fLOWers, trigger Bloom Mode, take over Times Square.
 
 ## Live URL
 
-Card + game are served from **https://0xmlow.github.io/bloomrun/**
+Card + game are served from **https://bloomrun.mlow.xyz/**
 
-- Tweet `https://0xmlow.github.io/bloomrun/` (the bare folder = `index.html`).
+- Tweet `https://bloomrun.mlow.xyz/` (the bare folder = `index.html`).
 - X scrapes the player meta tags and embeds the game in the timeline.
 
-## Deploy (GitHub Pages — free, already hosted here)
+## Hosting — GitHub Pages on a custom subdomain
 
-One-time, in the repo on github.com:
-**Settings → Pages → Source: `Deploy from a branch` → Branch: `main` / `(root)` → Save.**
-Wait ~1 minute; the files go live at:
+Served by GitHub Pages (`main` / root) on the custom domain in the `CNAME` file:
 
 ```
-https://0xmlow.github.io/bloomrun/                        -> index.html (tweet this)
-https://0xmlow.github.io/bloomrun/MLOW_Bloom_Run_NFT.html -> the game (embedded by X)
-https://0xmlow.github.io/bloomrun/bloomrun_poster_16x9.png -> preview image
+https://bloomrun.mlow.xyz/                        -> index.html (tweet this)
+https://bloomrun.mlow.xyz/MLOW_Bloom_Run_NFT.html -> the game (embedded by X)
+https://bloomrun.mlow.xyz/bloomrun_poster_16x9.png -> preview image
 ```
 
-### Later: move to mlow.xyz
-When the site is up, upload the same four files to a `/bloomrun/` folder at the
-root and find-and-replace `https://0xmlow.github.io/bloomrun` →
-`https://mlow.xyz/bloomrun` in `index.html`, then commit.
+DNS (in Squarespace): a `CNAME` record `bloomrun` → `0xmlow.github.io`.
+GitHub auto-provisions the HTTPS cert once that record resolves.
+
+### Short link: mlow.xyz/bloomrun
+Squarespace → Settings → Advanced → URL Mappings:
+`/bloomrun -> https://bloomrun.mlow.xyz/ 301`. X follows the redirect and reads
+the card from the subdomain.
 
 ### Twitter / X checklist
 - **Serve over HTTPS** (X requires it for player cards).
 - The host must **not** send `X-Frame-Options: DENY` or a restrictive
   `Content-Security-Policy: frame-ancestors` on these files, or the embed renders
   blank. (GitHub Pages / Netlify defaults are fine; check your own server.)
-- **Validate before posting:** paste `https://0xmlow.github.io/bloomrun/` into a DM to
+- **Validate before posting:** paste `https://bloomrun.mlow.xyz/` into a DM to
   yourself — the card preview renders there without posting publicly.
 - **Cache busting:** if you tweeted a broken link earlier, X cached the failure.
   Append `?v=2` to force a fresh scrape.
@@ -51,5 +52,5 @@ root and find-and-replace `https://0xmlow.github.io/bloomrun` →
 
 `MLOW_Bloom_Run_NFT.html` needs no server — it runs from a single file. For the
 mint, pin **that exact file** to IPFS and use the IPFS URI as the token's
-`animation_url`. Set `external_url` to `https://0xmlow.github.io/bloomrun/` so the
+`animation_url`. Set `external_url` to `https://bloomrun.mlow.xyz/` so the
 marketplace links back to the playable card.
